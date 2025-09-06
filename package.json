@@ -1,0 +1,61 @@
+{
+  "name": "developer-portfolio",
+  "version": "1.0.0",
+  "description": "🚀 Modern Full Stack Developer Portfolio - Built with Next.js, TypeScript, and Tailwind CSS. Features responsive design, smooth animations, and interactive components showcasing my web development expertise.",
+  "private": true,
+  "author": {
+    "name": "Hamdy Emad",
+    "email": "hamdyyemad@aol.com",
+    "url": "https://github.com/hamdyyemad"
+  },
+  "homepage": "https://github.com/hamdyyemad/developer-portfolio#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hamdyyemad/developer-portfolio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hamdyyemad/developer-portfolio/issues"
+  },
+  "keywords": [
+    "portfolio",
+    "nextjs",
+    "typescript",
+    "tailwindcss",
+    "react",
+    "fullstack",
+    "web-development",
+    "responsive-design",
+    "animations",
+    "personal-website",
+    "developer-portfolio"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@types/prismjs": "^1.26.5",
+    "@types/react-syntax-highlighter": "^15.5.13",
+    "next": "15.3.5",
+    "prismjs": "^1.30.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-markdown": "^10.1.0",
+    "react-syntax-highlighter": "^15.6.1",
+    "zustand": "^5.0.7"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.3.5",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
