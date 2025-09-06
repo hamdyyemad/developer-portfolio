@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
 import ExperienceTimeline from "../components/Experience/ExperienceTimeline";
 import GradientH2 from "@/designs/typography/GradientH2";
 
@@ -17,7 +16,7 @@ export default function ExperiencePage() {
               My professional journey through the world of software development
             </p>
           </section>
-          
+
           {/* Timeline Section */}
           <section className="md:ml-8 pl-8">
             <ExperienceTimeline />
@@ -26,4 +25,4 @@ export default function ExperiencePage() {
       </div>
     </div>
   );
-} 
+}

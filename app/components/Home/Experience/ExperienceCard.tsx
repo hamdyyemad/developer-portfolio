@@ -17,7 +17,7 @@ export default function ExperienceCard({ exp }: { exp: Experience }) {
     }
   };
 
-  const getTextColor = (id: number) => {
+  const getTextColor = () => {
     return "text-gray-300";
   };
 
@@ -51,9 +51,7 @@ export default function ExperienceCard({ exp }: { exp: Experience }) {
 
       <div className="relative z-10 w-full">
         <h3
-          className={`text-2xl font-extrabold ${getTextColor(
-            exp.id
-          )} mb-1 transition-all duration-500 group-hover:text-white`}
+          className={`text-2xl font-extrabold ${getTextColor()} mb-1 transition-all duration-500 group-hover:text-white`}
         >
           {exp.company}
         </h3>

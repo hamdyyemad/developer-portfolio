@@ -1,11 +1,9 @@
-import React from 'react';
-
 export interface Design {
   id: string;
   title: string;
   description: string;
-  category: 'button' | 'card' | 'form' | 'loader' | 'navigation' | 'modal';
-  technology: 'html' | 'css' | 'javascript' | 'react' | 'tailwind';
+  category: "button" | "card" | "form" | "loader" | "navigation" | "modal";
+  technology: "html" | "css" | "javascript" | "react" | "tailwind";
   previewComponent: string; // Reference to component name
   code: {
     html?: string;
@@ -66,9 +64,9 @@ const GradientButton = () => {
   );
 };
 
-export default GradientButton;`
+export default GradientButton;`,
     },
-    tags: ["button", "gradient", "hover", "tailwind"]
+    tags: ["button", "gradient", "hover", "tailwind"],
   },
   {
     id: "glass-card",
@@ -121,9 +119,9 @@ const GlassCard = () => {
   );
 };
 
-export default GlassCard;`
+export default GlassCard;`,
     },
-    tags: ["card", "glassmorphism", "backdrop-blur", "modern"]
+    tags: ["card", "glassmorphism", "backdrop-blur", "modern"],
   },
   {
     id: "loading-spinner",
@@ -171,9 +169,9 @@ const LoadingSpinner = () => {
   );
 };
 
-export default LoadingSpinner;`
+export default LoadingSpinner;`,
     },
-    tags: ["loader", "spinner", "animation", "css"]
+    tags: ["loader", "spinner", "animation", "css"],
   },
   {
     id: "floating-input",
@@ -265,9 +263,9 @@ const FloatingInput = () => {
   );
 };
 
-export default FloatingInput;`
+export default FloatingInput;`,
     },
-    tags: ["form", "input", "floating-label", "focus"]
+    tags: ["form", "input", "floating-label", "focus"],
   },
   {
     id: "neumorphic-button",
@@ -321,9 +319,9 @@ const NeumorphicButton = () => {
   );
 };
 
-export default NeumorphicButton;`
+export default NeumorphicButton;`,
     },
-    tags: ["button", "neumorphic", "soft-ui", "depth"]
+    tags: ["button", "neumorphic", "soft-ui", "depth"],
   },
   {
     id: "pulse-loader",
@@ -386,9 +384,9 @@ const PulseLoader = () => {
   );
 };
 
-export default PulseLoader;`
+export default PulseLoader;`,
     },
-    tags: ["loader", "pulse", "dots", "animation"]
+    tags: ["loader", "pulse", "dots", "animation"],
   },
   {
     id: "toggle-switch",
@@ -478,9 +476,9 @@ const ToggleSwitch = () => {
   );
 };
 
-export default ToggleSwitch;`
+export default ToggleSwitch;`,
     },
-    tags: ["form", "toggle", "switch", "interactive"]
+    tags: ["form", "toggle", "switch", "interactive"],
   },
   {
     id: "progress-bar",
@@ -552,9 +550,9 @@ const ProgressBar = () => {
   );
 };
 
-export default ProgressBar;`
+export default ProgressBar;`,
     },
-    tags: ["loader", "progress", "gradient", "animation"]
+    tags: ["loader", "progress", "gradient", "animation"],
   },
   {
     id: "animated-card",
@@ -615,9 +613,9 @@ const AnimatedCard = () => {
   );
 };
 
-export default AnimatedCard;`
+export default AnimatedCard;`,
     },
-    tags: ["card", "3d", "animation", "hover"]
+    tags: ["card", "3d", "animation", "hover"],
   },
   {
     id: "ripple-button",
@@ -713,9 +711,9 @@ const RippleButton = () => {
   );
 };
 
-export default RippleButton;`
+export default RippleButton;`,
     },
-    tags: ["button", "ripple", "javascript", "interactive"]
+    tags: ["button", "ripple", "javascript", "interactive"],
   },
   {
     id: "skeleton-loader",
@@ -809,9 +807,9 @@ const SkeletonLoader = () => {
   );
 };
 
-export default SkeletonLoader;`
+export default SkeletonLoader;`,
     },
-    tags: ["loader", "skeleton", "shimmer", "content"]
+    tags: ["loader", "skeleton", "shimmer", "content"],
   },
   {
     id: "floating-nav",
@@ -927,8 +925,8 @@ const FloatingNav = () => {
   );
 };
 
-export default FloatingNav;`
+export default FloatingNav;`,
     },
-    tags: ["navigation", "floating", "glassmorphism", "responsive"]
-  }
-]; 
+    tags: ["navigation", "floating", "glassmorphism", "responsive"],
+  },
+];

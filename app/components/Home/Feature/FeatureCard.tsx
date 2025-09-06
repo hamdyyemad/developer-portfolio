@@ -6,7 +6,7 @@ import FeatureEffectsWrapper from "./wrappers/FeatureEffectsWrapper";
 
 export default function FeatureCard({ feature }: { feature: Feature }) {
   const { isVisible, cardRef, handleMouseEnter, handleMouseLeave } =
-    useFeatureCard(feature);
+    useFeatureCard();
 
   return (
     <FeatureEffectsWrapper

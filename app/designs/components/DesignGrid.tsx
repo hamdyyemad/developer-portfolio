@@ -11,13 +11,13 @@ interface DesignGridProps {
 // Mock data for demonstration
 const mockAuthors = [
   "alexruix",
-  "Novaxlo", 
+  "Novaxlo",
   "gharsh11032000",
   "Admin12121",
   "OfficialRushO",
   "Silaskodrigues19",
   "Lucaasore",
-  "zanina-yassine"
+  "zanina-yassine",
 ];
 
 const getRandomAuthor = (id: string) => {
@@ -25,19 +25,24 @@ const getRandomAuthor = (id: string) => {
   return mockAuthors[index];
 };
 
-const getRandomStats = (id: string) => {
+const getRandomStats = () => {
   const views = Math.floor(Math.random() * 50) + 1;
   const likes = Math.floor(Math.random() * 100) + 10;
   return { views: `${views}K`, likes };
 };
 
-export default function DesignGrid({ designs, onSelectDesign }: DesignGridProps) {
+export default function DesignGrid({
+  designs,
+  onSelectDesign,
+}: DesignGridProps) {
   if (designs.length === 0) {
     return (
       <div className="flex flex-col items-center justify-center py-16">
         <div className="text-6xl mb-4">🔍</div>
         <h3 className="text-xl font-bold text-white mb-2">No designs found</h3>
-        <p className="text-gray-400">Try adjusting your filters or search terms</p>
+        <p className="text-gray-400">
+          Try adjusting your filters or search terms
+        </p>
       </div>
     );
   }
@@ -47,8 +52,8 @@ export default function DesignGrid({ designs, onSelectDesign }: DesignGridProps)
       {designs.map((design) => {
         const PreviewComponent = previewComponents[design.previewComponent];
         const author = getRandomAuthor(design.id);
-        const stats = getRandomStats(design.id);
-        
+        const stats = getRandomStats();
+
         return (
           <div
             key={design.id}
@@ -58,7 +63,7 @@ export default function DesignGrid({ designs, onSelectDesign }: DesignGridProps)
             {/* Preview Area */}
             <div className="bg-[#2a2a2a] p-6 flex justify-center items-center h-48 relative overflow-hidden">
               {PreviewComponent && <PreviewComponent />}
-              
+
               {/* Hover Overlay */}
               <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                 <div className="bg-orange-500 text-white px-4 py-2 rounded-lg font-medium">
@@ -79,16 +84,22 @@ export default function DesignGrid({ designs, onSelectDesign }: DesignGridProps)
 
               {/* Technology Badge and Category */}
               <div className="flex items-center justify-between mb-3">
-                <span className={`px-3 py-1 text-xs rounded-full font-medium ${
-                  design.technology === 'tailwind' ? 'bg-blue-500/20 text-blue-400 border border-blue-500/30' :
-                  design.technology === 'react' ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30' :
-                  design.technology === 'css' ? 'bg-pink-500/20 text-pink-400 border border-pink-500/30' :
-                  design.technology === 'html' ? 'bg-orange-500/20 text-orange-400 border border-orange-500/30' :
-                  'bg-gray-500/20 text-gray-400 border border-gray-500/30'
-                }`}>
+                <span
+                  className={`px-3 py-1 text-xs rounded-full font-medium ${
+                    design.technology === "tailwind"
+                      ? "bg-blue-500/20 text-blue-400 border border-blue-500/30"
+                      : design.technology === "react"
+                      ? "bg-cyan-500/20 text-cyan-400 border border-cyan-500/30"
+                      : design.technology === "css"
+                      ? "bg-pink-500/20 text-pink-400 border border-pink-500/30"
+                      : design.technology === "html"
+                      ? "bg-orange-500/20 text-orange-400 border border-orange-500/30"
+                      : "bg-gray-500/20 text-gray-400 border border-gray-500/30"
+                  }`}
+                >
                   {design.technology.toUpperCase()}
                 </span>
-                
+
                 <span className="text-xs text-gray-500 capitalize">
                   {design.category}
                 </span>
@@ -119,13 +130,19 @@ export default function DesignGrid({ designs, onSelectDesign }: DesignGridProps)
                       {author.charAt(0).toUpperCase()}
                     </span>
                   </div>
-                  <span className="text-sm text-gray-300 font-medium">{author}</span>
+                  <span className="text-sm text-gray-300 font-medium">
+                    {author}
+                  </span>
                 </div>
-                
+
                 <div className="flex items-center space-x-3 text-xs text-gray-400">
                   <span>{stats.views} views</span>
                   <span className="flex items-center space-x-1">
-                    <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                    <svg
+                      className="w-3 h-3"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
                       <path d="M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6 10.333v5.43a2 2 0 001.106 1.79l.05.025A4 4 0 008.943 18h5.416a2 2 0 001.962-1.608l1.2-6A2 2 0 0015.56 8H12V4a2 2 0 00-2-2 1 1 0 00-1 1v.667a4 4 0 01-.8 2.4L6.8 7.933a4 4 0 00-.8 2.4z" />
                     </svg>
                     <span>{stats.likes}</span>
@@ -138,4 +155,4 @@ export default function DesignGrid({ designs, onSelectDesign }: DesignGridProps)
       })}
     </div>
   );
-} 
+}

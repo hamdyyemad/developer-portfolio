@@ -1,9 +1,8 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { type Feature } from "@/app/data/features";
 
-export function useFeatureCard(feature: Feature) {
+export function useFeatureCard() {
   const [isVisible, setIsVisible] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
 

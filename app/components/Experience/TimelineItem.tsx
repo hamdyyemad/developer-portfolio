@@ -11,7 +11,11 @@ interface TimelineItemProps {
   isEven: boolean;
 }
 
-export default function TimelineItem({ experience, index, isActive, isEven }: TimelineItemProps) {
+export default function TimelineItem({
+  experience,
+  isActive,
+  isEven,
+}: TimelineItemProps) {
   const itemRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -36,7 +40,7 @@ export default function TimelineItem({ experience, index, isActive, isEven }: Ti
 
   const getStatusIcon = (status: string) => {
     switch (status) {
-      case 'current':
+      case "current":
         return (
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -51,7 +55,7 @@ export default function TimelineItem({ experience, index, isActive, isEven }: Ti
             />
           </svg>
         );
-      case 'previous':
+      case "previous":
         return (
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -105,16 +109,20 @@ export default function TimelineItem({ experience, index, isActive, isEven }: Ti
           }`}
         >
           {/* Status indicator */}
-          <div className={`flex items-center space-x-2 mb-4 ${
-            isEven ? "md:justify-end justify-start" : "justify-start"
-          }`}>
-            <div className={`w-3 h-3 rounded-full ${
-              experience.status === 'current' 
-                ? 'bg-orange-500 animate-pulse' 
-                : experience.status === 'previous'
-                ? 'bg-gray-500'
-                : 'bg-orange-500'
-            }`} />
+          <div
+            className={`flex items-center space-x-2 mb-4 ${
+              isEven ? "md:justify-end justify-start" : "justify-start"
+            }`}
+          >
+            <div
+              className={`w-3 h-3 rounded-full ${
+                experience.status === "current"
+                  ? "bg-orange-500 animate-pulse"
+                  : experience.status === "previous"
+                  ? "bg-gray-500"
+                  : "bg-orange-500"
+              }`}
+            />
             <span className="text-sm text-gray-300 capitalize font-medium">
               {experience.status}
             </span>
@@ -152,8 +160,19 @@ export default function TimelineItem({ experience, index, isActive, isEven }: Ti
 
           {/* Arrow icon */}
           {experience.link && (
-            <Link href={experience.link} passHref className="absolute top-4 right-4 text-orange-500 hover:text-orange-600 transition-all duration-500 hover:scale-150">
-              <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" className="transition-transform duration-500 hover:rotate-45">
+            <Link
+              href={experience.link}
+              passHref
+              className="absolute top-4 right-4 text-orange-500 hover:text-orange-600 transition-all duration-500 hover:scale-150"
+            >
+              <svg
+                width="24"
+                height="24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                className="transition-transform duration-500 hover:rotate-45"
+              >
                 <path d="M8 12h8M12 8l4 4-4 4" />
               </svg>
             </Link>
@@ -165,14 +184,16 @@ export default function TimelineItem({ experience, index, isActive, isEven }: Ti
       <div className="relative z-10 flex-shrink-0 order-first md:order-none">
         <div
           className={`w-16 h-16 rounded-full bg-[#181818] border-4 border-[#232323] flex items-center justify-center transition-all duration-500 ${
-            isActive 
-              ? "border-orange-500 shadow-lg shadow-orange-500/25 scale-110" 
+            isActive
+              ? "border-orange-500 shadow-lg shadow-orange-500/25 scale-110"
               : "hover:border-orange-500 hover:scale-105"
           }`}
         >
-          <div className={`transition-all duration-500 ${
-            isActive ? "animate-bounce" : ""
-          }`}>
+          <div
+            className={`transition-all duration-500 ${
+              isActive ? "animate-bounce" : ""
+            }`}
+          >
             {getStatusIcon(experience.status)}
           </div>
         </div>
@@ -182,4 +203,4 @@ export default function TimelineItem({ experience, index, isActive, isEven }: Ti
       <div className="hidden md:block w-5/12" />
     </div>
   );
-} 
+}
