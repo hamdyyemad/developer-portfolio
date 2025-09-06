@@ -1,5 +1,5 @@
 'use client';
-
+import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import CodeSnippet from './CodeSnippet';
 
@@ -8,13 +8,21 @@ interface MarkdownRendererProps {
   className?: string;
 }
 
+interface CodeProps {
+  node: any;
+  inline: boolean;
+  className: string | undefined;
+  children: React.ReactNode;
+  [key: string]: any; // Allow for other props that may be passed down
+}
+
 export default function MarkdownRenderer({ content, className = "" }: MarkdownRendererProps) {
   return (
     <div className={`prose prose-invert prose-lg max-w-none ${className}`}>
       <ReactMarkdown
         components={{
           // Custom code block component
-          code: ({ node, inline, className, children, ...props }) => {
+          code: ({ node, inline, className, children, ...props }: CodeProps) => {
             const match = /language-(\w+)/.exec(className || '');
             const language = match ? match[1] : 'plaintext';
             
