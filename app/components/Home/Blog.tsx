@@ -5,8 +5,8 @@ import BlogsList from "./Blog/BlogsList";
 export default function Blog() {
 
   return (
-    <section id="blog" className="md:ml-8 pl-8">
-      <GradientH2 firstText="Latest" secondText="BLOGS" />
+    <section id="blog" className="mb-12 md:ml-8 p-8">
+      <GradientH2 firstText="RECENT" secondText="BLOGS" />
       <div className="grid grid-cols-1 gap-8 mt-10">
         <BlogsList />
       </div>

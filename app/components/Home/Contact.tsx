@@ -2,7 +2,7 @@ import GradientH2 from "@/designs/typography/GradientH2";
 
 export default function Contact() {
   return (
-    <section id="contact" className="mt-20 md:ml-8 pl-8">
+    <section id="contact" className="mb-12 md:ml-8 p-8">
       <GradientH2 firstText="LET'S WORK" secondText="TOGETHER" />
       <form className="bg-[#232323] rounded-xl p-10 flex flex-col gap-6 w-full max-w-3xl mt-10 shadow-lg mx-auto">
         <div className="flex flex-col md:flex-row gap-6">

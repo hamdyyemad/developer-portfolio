@@ -111,7 +111,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <GridPattern />
+        {/* <GridPattern /> */}
         <Navbar />
         <div className="pt-16">
           <GradientCircles />

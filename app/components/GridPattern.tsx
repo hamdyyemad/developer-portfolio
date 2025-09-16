@@ -1,6 +1,6 @@
 export default function GridPattern() {
   return (
-    <div className="absolute inset-0 opacity-5">
+    <div className="fixed inset-0 opacity-5 pointer-events-none z-0">
       <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <pattern

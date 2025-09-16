@@ -29,7 +29,7 @@ export default function GradientH2({ firstText, secondText }: GradientH2Props) {
                     }
                 `}
             </style>
-            <h2 className="text-7xl lg:text-8xl font-extrabold text-white uppercase leading-tight tracking-tight mb-4">
+            <h2 className="text-5xl lg:text-8xl font-extrabold text-white uppercase leading-tight tracking-tight mb-4">
                 {firstText}{" "}
                 <span className="gradient-text-container cursor-pointer">
                     {letters.map((letter, index) => (

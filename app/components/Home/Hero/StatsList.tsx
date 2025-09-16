@@ -8,7 +8,7 @@ export default function StatsList() {
   return (
     <EffectWrapper>
       {/* Stats grid with enhanced spacing */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 lg:gap-8 p-4">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 lg:gap-8 md:pl-4 pr-4">
         {stats.map((stat, index) => (
           <div
             key={`${index} - ${stat.value}`}
